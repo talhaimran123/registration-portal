@@ -98,6 +98,10 @@ const StudentSchema = new mongoose.Schema({
   },
   department: {
     type: String,
+    enum: {
+      values: ['حفظ', 'ناظرہ', 'قاعدہ'],
+      message: '{VALUE} is not supported'
+    },
     trim: true,
     // required: [true, "department can't be blank"],
   },
